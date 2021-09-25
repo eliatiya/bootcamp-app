@@ -28,3 +28,17 @@ This sample application demonstrates the following technologies.
 1. Run `npm run dev` to start Node.js
 
 The associated blog post goes into more detail on how to set up PostgreSQL with Docker and how to configure your Okta account.
+
+# Instruction : 
+
+**app**
+* nodejs 14v
+* in .env file and src/index.js edit ip address 
+* cp weight-tracker.service to /etc/systemd/system/*
+* systemctl enable weight-tracker.service
+* systemctl start weight-tracker.service
+
+**postgress**
+* configure pass to postgres user after installation
+* pg.hba.conf add " host    all             all             {IP}/32         trust"
+* postgresql.conf add " listen.addresses = '*' "   
