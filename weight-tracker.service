@@ -1,0 +1,11 @@
+[Unit]
+Description=timeTracker
+[Service]
+ExecStart=/usr/local/bin/npm run dev
+Restart=always
+Group=nogroup
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=development
+WorkingDirectory=/home/ubuntu/bootcamp-app
+[Install]
+WantedBy=multi-user.target
